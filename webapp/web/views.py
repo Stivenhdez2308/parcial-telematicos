@@ -6,6 +6,13 @@ app = Flask(__name__)
 app.config.from_object('config.Config')
 db.init_app(app)
 
+# Crear las tablas automáticamente
+with app.app_context():
+    # Importar todos los modelos para que SQLAlchemy los conozca
+    from users.models.user_model import Users
+    db.create_all()
+    print("Tablas de base de datos creadas correctamente")
+
 # Registrando el blueprint del controlador de usuarios
 app.register_blueprint(user_controller)
 
@@ -21,4 +28,3 @@ def edit_user(id):
 
 if __name__ == '__main__':
     app.run()
-
