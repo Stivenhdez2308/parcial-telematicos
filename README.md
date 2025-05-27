@@ -1,16 +1,8 @@
-# To Run application
+# Parcial Servicios Telematicos
 
-## Start and SSH into Vagrant VM 
-
-```
-vagrant up
-vagrant ssh servidorWeb
-```
-
-## Run the webApp
+## Presentado por 
 
 ```
-cd /home/vagrant/webapp
-export FLASK_APP=run.py
-/usr/local/bin/flask run --host=0.0.0.0
+Ricardo Stiven Gonzalez - 2215602
+Carlos Andres Alzate - 2216089
 ```
